@@ -1,0 +1,324 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+</head>
+
+<style>
+      body {
+            padding: 0;
+            margin: 0;
+            background: #f7f7f7;
+            background-position: center;
+            background-attachment: absolute;
+            width: 100%;
+        }
+
+        header {
+            overflow: hidden;
+            display: inline;
+            position: relative;
+          
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.507);
+        }
+
+        div {
+            overflow: hidden;
+            background-color: #2d356e;
+           
+            width: 100%;
+        }
+
+        div ul {
+            border-radius: 20px;
+            overflow: hidden;
+            width: 100%;
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0);
+
+        }
+
+        div ul li {
+            list-style-type: none;
+            font-size: 16px;
+            text-transform: capitalize;
+            color: white;
+            float: left;
+            text-decoration: none;
+            text-align: center;
+            list-style: none;
+            padding: 13px 15px;
+            margin: 6px 6px;
+            background-color: rgb(0, 0, 0, 0);
+            border-radius: 20px;
+
+        }
+
+        div ul li a {
+            display: inline;
+            position: relative;
+            left: 220px;
+            text-decoration: none;
+            text-align: center;
+            padding: 16px 18px;
+            font-size: 16px;
+            color: rgb(3, 3, 3);
+            font-family: Georgia, serif;
+            border-radius: 20px;
+            background-color:#e1eaf5;
+           
+        }
+
+        div li a:hover {
+            background-color: #e67f3c;
+            font-size: 16px;
+           
+            text-transform: capitalize;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            list-style: none;
+            padding: 16px 18px;
+            margin: 6px 6px;
+            border-radius: 20px;
+           
+
+
+        }
+
+        div a.active {
+            background-color: #f7b543;
+
+        }
+
+        .marquee {
+            width: 100%;
+            padding-top: 5px;
+            margin: auto;
+            height: 60px;
+            font-size: 40px;
+            font-family: Arial;
+            font-weight: bolder;
+            display: inline;
+            position: relative;
+            color: rgb(255, 0, 0);
+
+        }
+
+        #para {
+            font-size: 25px;
+            text-align: center;
+            color: rgb(166, 255, 0);
+        }
+
+       div .logo img {
+            height: 45px;
+            width: 60px;
+            
+            
+        }
+
+        
+        
+        .bankimg{
+         padding-left:595px;
+    
+         }
+         
+         
+        .column{
+            display:block;
+            font-weight:bolder;
+            padding-left:60px;
+            font-size: 45px;
+            color:#2d356e;
+        }
+        
+        p{
+        
+        font-size: 25px;
+        font-weight: lighter;
+        font-family: 'Brush Script MT', cursive;
+        }
+        
+    table {
+        border-collapse: collapse;
+        position: absolute;
+        transform: translate(25%, 1%);
+        top:180px ;
+        left: -100px;
+        width: 800px;
+        height: 120px;
+        margin: 2px;
+        font-size: 15px;
+        border: 1px solid #bdc3c7;
+        box-shadow: 2px 2px 12px rgb(0, 0, 0, 0.2), -1px -1px 9px rgb(0, 0, 0, 0);
+        
+
+
+    }
+
+    tr {
+        transition: all .2s ease-in;
+        cursor: pointer;
+        background-color: #e8f0fa;
+        position: static;
+        font-family: Georgia, serif;
+    }
+
+    th,
+    td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+
+    }
+
+    #header {
+        background-color: #f7853b;
+        color: #fff;
+    }
+
+    tr:hover {
+        background-color: #e8f0fa;
+        color: rgb(0, 0, 0);
+        transform: scale(1.05);
+        box-shadow: 2px 2px 12px rgb(0, 0, 0, 0.2), -1px -1px 9px rgb(0, 0, 0, 0);
+    }
+
+    
+
+    .btn1 {
+        overflow: visible;
+        display: inline-block;
+        position: relative;
+        top: -20px;
+        left: 820px;
+        padding: 8px 20px;
+        margin: 7px 3px;
+        border: 2px solid #2d356e;
+        color:  #f7853b;
+        border-radius: 8px;
+        cursor: pointer;
+        background: #e8f0fa;
+        font-weight: bold;
+
+
+    }
+
+   
+
+    .btn:hover {
+        padding: 8px 20px;
+        margin: 7px 3px;
+        border: 2px solid green;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+        background: green;
+    }
+
+    .btn1:hover {
+        padding: 8px 20px;
+        margin: 7px 3px;
+        border: 2px solid #2d356e;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+        background:  #f7853b;
+    }
+
+    .btn2:hover {
+        padding: 8px 20px;
+        margin: 7px 3px;
+        border: 2px solid green;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+        background: green;
+    }
+    @media only screen and (max-width: 768px) {
+            table {
+                width: 90%;
+            }
+            div{
+                width: 90%;
+            }
+        }
+
+    
+</style>
+
+<body>
+    <header>
+        <div>
+        
+            <ul>
+              <span class="logo">
+                <img src="{% static 'img/logo.png' %}" align="left" alt="Logo"></span>
+
+                <li style="background-color: #e67f3c" style=" border: 2px solid white">
+                    NATIONAL BANK</li>
+                <li><a href="home">Home</a></li>
+                <li><a href="data">Customer view</a></li>
+                <li><a href="transfer">Transfer money</a></li>
+                <li><a href="bankstataement">Bank Statement</a></li>
+                <li><a class="active" href="transfer_hist">Transfer History</a></li>
+                
+            </ul>
+        </div>
+    </header>
+
+  <br>
+   <br>
+ 
+ <span class="column">
+  
+ <img src="{% static 'img/bank2.jpeg' %}" align= "right" alt="bankimg" width="750" height="500">
+   
+</span>
+   <br> 
+    <table>
+
+        <tr id="header">
+            <th>Sender Name</th>
+            <th>Sender Account No</th>
+            <th>Receiver Name</th>
+            <th>Receiver Account No</th>
+            <th>Amount (Rs)</th>
+            
+           
+        </tr>
+        {% for item in transfer %}
+        <tr>
+            <td>{{item.SenderName}}</td>
+            <td>{{item.SenderAccountNo}}</td>
+            <td>{{item.ReceiverName}}</td>
+            <td>{{item.ReceiverAccountNo}}</td>
+            <td>{{item.Amount}}</td>
+           
+        </tr>
+        {% endfor %}
+
+
+        
+    </table>
+ 
+        <button onclick="window.print()" class="btn1">Print</button>
+       
+   
+
+
+
+
+
+</body>
+
+</html>
